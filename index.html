@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Наши панорамы | Marzipano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="pano" aria-label="Панорама 360 градусов"></div>
+  <header>
+    <h1>Наши панорамы</h1>
+    <nav aria-label="Выбор панорамы" id="scenes"></nav>
+    <button id="show-plan" type="button">План</button>
+  </header>
+  <p id="status" role="status">Загрузка панорамы…</p>
+  <footer>Перетаскивай для осмотра · Колёсико для масштаба</footer>
+  <dialog id="plan">
+    <button id="close-plan" type="button" autofocus>Закрыть</button>
+    <img src="assets/план.jpg" alt="План объекта">
+  </dialog>
+  <script src="vendor/marzipano.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
