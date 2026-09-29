@@ -1,0 +1,38 @@
+{
+  "name": "marzipano-tour-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline panorama tour for Windows",
+  "author": "sandexzx",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/server.test.cjs",
+    "smoke": "electron . --smoke-test --enable-unsafe-swiftshader",
+    "dist:win": "electron-builder --win portable --x64 --publish never"
+  },
+  "devDependencies": {
+    "electron": "44.5.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "io.github.sandexzx.marzipano-tour",
+    "productName": "Marzipano Tour",
+    "asar": true,
+    "directories": { "output": "dist" },
+    "files": [
+      "electron/**",
+      "index.html",
+      "index.js",
+      "style.css",
+      "tour.js",
+      "assets/**",
+      "vendor/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [{ "target": "portable", "arch": ["x64"] }],
+      "artifactName": "Marzipano-Tour-${version}-Windows-${arch}.${ext}"
+    }
+  }
+}
