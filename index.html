@@ -14,12 +14,13 @@
     <button id="show-plan" type="button">План</button>
   </header>
   <p id="status" role="status">Загрузка панорамы…</p>
-  <footer>Перетаскивай для осмотра · Колёсико для масштаба</footer>
+  <footer><span id="location"></span><br>Стрелки — переход · Перетаскивай для осмотра · Колёсико для масштаба</footer>
   <dialog id="plan">
     <button id="close-plan" type="button" autofocus>Закрыть</button>
-    <img src="assets/план.jpg" alt="План объекта">
+    <div id="plan-image"><img src="assets/план.jpg" alt="План объекта с пятью точками съёмки"></div>
   </dialog>
   <script src="vendor/marzipano.js"></script>
+  <script src="tour.js"></script>
   <script src="index.js"></script>
 </body>
 </html>

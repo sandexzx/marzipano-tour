@@ -14,5 +14,15 @@ button:focus-visible { outline: 3px solid #8ac2ff; outline-offset: 3px; }
 footer { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); padding: 8px 12px; border-radius: 8px; background: rgba(15, 23, 42, .75); font-size: 13px; text-align: center; pointer-events: none; }
 dialog { width: min(1100px, 95vw); max-height: 92vh; padding: 14px; border: 0; border-radius: 12px; background: #161b22; }
 dialog::backdrop { background: rgba(0, 0, 0, .75); }
-dialog img { display: block; max-width: 100%; max-height: 78vh; margin: 12px auto 0; object-fit: contain; }
+#plan-image { position: relative; width: min(100%, calc(78vh * 2823 / 2152)); margin: 12px auto 0; }
+dialog img { display: block; width: 100%; height: auto; }
+.plan-marker { position: absolute; transform: translate(-50%, -50%); border-radius: 50%; width: 32px; height: 32px; padding: 0; font-weight: 700; background: #9b2020; border: 2px solid white; box-shadow: 0 2px 8px #0008; }
+.plan-marker[aria-pressed="true"] { background: #2267b9; outline: 3px solid #8ac2ff; }
+.travel-arrow { width: 120px; height: 120px; border: 0; padding: 0; background: transparent; border-radius: 50%; backface-visibility: hidden; }
+.travel-arrow:hover { background: transparent; }
+.travel-arrow svg { display: block; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 5px 3px #0008); }
+.travel-arrow circle { fill: #152a40bb; stroke: #fff; stroke-width: 4; }
+.travel-arrow path { fill: none; stroke: #fff; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+.travel-arrow:hover circle, .travel-arrow:focus-visible circle { fill: #2267b9; }
+#location { display: inline-block; margin-bottom: 4px; font-weight: 600; }
 @media (max-width: 600px) { header { gap: 10px; top: 8px; left: 8px; right: 8px; padding: 10px; } h1 { width: 100%; } button { padding: 8px 10px; } footer { width: max-content; max-width: 95%; } #status { top: 170px; } }
